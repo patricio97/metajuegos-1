@@ -1,0 +1,45 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
+.navbar-brand {
+  font-family: "Lobster", cursive;
+  font-size: 39px;
+}
+.carousel-indicators {
+  top: 105%;
+}
+.carousel-indicators li {
+  background-color: #373a3c;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+}
+
+.ml-10{
+  margin-left: 50rem;
+}
+
+.ml-8{
+  margin-left: 20%;
+}
+.text-resp{
+font-size: 260%;
+}
+
+.footer-end{
+  background-color: #DC3545;
+  text-align: center;
+}
+
+.footer-last{
+background-color: #373A3C;
+text-align: center;
+}
+
+.red{
+  color: #DC3545;
+}
+
+
