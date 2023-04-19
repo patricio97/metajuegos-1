@@ -1,22 +1,16 @@
 from django.shortcuts import render
-from .models import Credencial, Producto
-from .forms import CredencialForm
+from .models import Credencial
+
 
 # Create your views here.
 def home(request):
-    
-    Productos = Producto.objects.all()
-    contexto ={"Productos":Productos}
 
-    return render(request, 'core/index.html', contexto)
+    return render(request, 'core/index.html')
 
 def login(request):
 
     return render(request, 'core/login.html')
 
 def register(request):
-    datos= {
-        'form': CredencialForm()
-    }
-    
-    return render(request, 'core/register.html', datos)
+ 
+    return render(request, 'core/register.html')

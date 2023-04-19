@@ -2,24 +2,33 @@ from django.db import models
 
 # Create your models here.
 class Credencial(models.Model):
-    username = models.CharField(primary_key=True, max_length=60, verbose_name='Nombre Usuario')
-    password = models.CharField(max_length=20, verbose_name='Contraseña Usuario')
+    idUsuario = models.IntegerField(primary_key=True, verbose_name='Id de Usuario')
+    nombreUsuario = models.CharField(max_length=60, verbose_name='Nombre de Usuario')
+
     def __str__(self):
-        return self.username
+        return self.nombreUsuario
     
-
-class Producto(models.Model):
-    id_producto = models.CharField(primary_key=True, max_length=16, verbose_name="Codigo_producto")
-    nombre_producto = models.CharField(max_length=30, verbose_name="Nombre_producto")
-    categoria = models.CharField(max_length=20, verbose_name="Categoria_producto")
+class Usuario(models.Model):
+    nombreCompleto = models.CharField(primary_key=True, max_length=60, verbose_name="Nombre Completo Usuario")
+    correo = models.CharField(max_length=60, verbose_name="Correo Usuario")
+    numeroTelefono = models.IntegerField(verbose_name="Numero Usuario")
+    Credencial = models.ForeignKey(Credencial, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.nombre_producto
+        return self.nombreCompleto
+    
+class Producto(models.Model):
+    idProducto = models.CharField(primary_key=True, max_length=60, verbose_name="Id Producto")
+    nombreProducto = models.CharField(max_length=60, verbose_name="Nombre Producto")
+    categoria = models.IntegerField(verbose_name="Categoria")
+
+    def __str__(self):
+        return self.idProducto
     
 class Carrito(models.Model):
-    id_carrito = models.IntegerField(primary_key=True, verbose_name="Id_carrito")
+    idCarrito = models.IntegerField(primary_key=True, verbose_name="Id Carrito")
     Producto = models.ForeignKey(Producto, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.id_carrito
+        return self.idCarrito
     

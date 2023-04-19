@@ -18,17 +18,17 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-dark container-fluid">
-      <a class="navbar-brand text-white ml-8" href="index.html">Meta Juegos</a>
+      <a class="navbar-brand text-white ml-8" href="home">Meta Juegos</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-8 ">
           <li class="nav-item active">
-            <a class="nav-link text-white" href="index.html">Inicio <span class="sr-only"></span></a>
+            <a class="nav-link text-white" href="home">Inicio <span class="sr-only"></span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="login.html">Iniciar Sesión</a>
+            <a class="nav-link text-white" href="home">Iniciar Sesión</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-white" href="#">Nosotros</a>
@@ -50,9 +50,9 @@
     
                   <h2 class="fw-bold mb-2 text-uppercase">Registrate</h2>
                   <p class="text-white-50 mb-5">Ingresa tu usuario y password!</p>
-                  {% csrf_token %}
+                  
                   <div class="form-outline form-white mb-4">
-                    {{form.as_table}}
+                    
                     <input type="email" id="username" class="form-control form-control-lg" />
                     <label class="form-label" for="typeEmailX">Email</label>
                   </div>
@@ -73,7 +73,7 @@
                 </div>
     
                 <div>
-                  <p class="mb-0">Ya tienes cuenta? <a href="login.html" class="text-white-50 fw-bold">Inicia Sesión</a>
+                  <p class="mb-0">Ya tienes cuenta? <a href="login-app" class="text-white-50 fw-bold">Inicia Sesión</a>
                   </p>
                 </div>
     
