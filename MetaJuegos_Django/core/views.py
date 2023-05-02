@@ -15,4 +15,4 @@ def register(request):
 
 def carrito(request):
 
-    return render(request, "core/register.html")
+    return render(request, "core/carrito.html")
