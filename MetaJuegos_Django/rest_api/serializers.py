@@ -1,7 +1,7 @@
 from rest_framework import serializers
-from core.models import Mascota
+from core.models import Juego
 
-class MascotaSerializer(serializers.ModelSerializer):
+class JuegoSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Mascota
-        fields = ['codigoChip','nombreMascota','edadMascota','raza']
+        model = Juego
+        fields = ['codigoJuego','nombreJuego','genero','plataforma']
