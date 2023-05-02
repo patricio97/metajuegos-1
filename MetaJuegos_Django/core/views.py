@@ -12,3 +12,7 @@ def login(request):
 def register(request):
 
     return render(request, "core/register.html")
+
+def carrito(request):
+
+    return render(request, "core/register.html")
