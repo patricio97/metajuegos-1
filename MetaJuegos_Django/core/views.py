@@ -1,8 +1,5 @@
 from django.shortcuts import render
-from .models import Cuenta
-from .forms import Cuentaform
-
-
+        
 # Create your views here.
 def home(request):
 
@@ -10,21 +7,8 @@ def home(request):
 
 def login(request):
 
-    datos= {
-        'form': Cuentaform()
-    }
-
-    return render(request, 'core/login.html', datos)
+    return render(request, "core/login.html")
 
 def register(request):
 
-    datos= {
-        'form': Cuentaform()
-    }
-    if request.method== 'POST':
-        formulario = Cuentaform(request.POST)
-        if formulario.is_valid:
-            formulario.save()
-            datos['mensaje'] = "Cuenta Registrada"
- 
-    return render(request, 'core/register.html', datos)
+    return render(request, "core/register.html")

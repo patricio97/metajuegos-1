@@ -8,13 +8,6 @@ class Credencial(models.Model):
     def __str__(self):
         return self.nombreUsuario
     
-class Cuenta(models.Model):
-    username = models.CharField(primary_key=True, max_length=20, verbose_name='Username')
-    password = models.CharField(max_length=20, verbose_name='Password')
-
-    def __str__(self):
-        return self.username
-    
 class Usuario(models.Model):
     nombreCompleto = models.CharField(primary_key=True, max_length=60, verbose_name="Nombre Completo Usuario")
     correo = models.CharField(max_length=60, verbose_name="Correo Usuario")
@@ -31,13 +24,20 @@ class Producto(models.Model):
     def __str__(self):
         return self.idProducto
     
-    
 
-    
 class Carrito(models.Model):
     idCarrito = models.IntegerField(primary_key=True, verbose_name="Id Carrito")
     Producto = models.ForeignKey(Producto, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.idCarrito
+    
+class Mascota(models.Model):
+    codigoChip = models.IntegerField(verbose_name="Id chip")
+    nombreMascota = models.CharField(max_length=60, verbose_name="Nombre Mascota")
+    edadMascota = models.IntegerField(verbose_name="edad Mascota")
+    raza = models.IntegerField(verbose_name="Raza")
+
+    def __int__(self):
+        return self.codigoChip
     
