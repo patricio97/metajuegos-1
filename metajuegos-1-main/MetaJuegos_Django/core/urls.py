@@ -1,6 +1,7 @@
 from django.urls import path
-from.views import home
+from .views import home
 from . import views
+from rest_api.viewslogin import login
 
 urlpatterns = [
     path('', home, name="home"),

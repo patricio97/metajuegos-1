@@ -13,7 +13,7 @@ class Juego(models.Model):
 class Carrito(models.Model):
     idCarrito = models.IntegerField(primary_key=True, verbose_name="Id Carrito")
 
-    def __str__(self):
+    def __int__(self):
         return self.idCarrito
   
     
