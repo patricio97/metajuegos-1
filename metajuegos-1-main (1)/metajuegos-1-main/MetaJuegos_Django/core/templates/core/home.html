@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -30,7 +31,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-8 ">
           <li class="nav-item active">
-            <a class="nav-link text-white" href="home">Inicio <span class="sr-only">(current)</span></a>
+            <a class="nav-link text-white" href="home">Inicio <span class="sr-only"></span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-white" href="login-app">Iniciar Sesión</a>
@@ -41,9 +42,19 @@
           <li class="nav-item">
             <a class="nav-link text-white">Contacto</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="carrito-app">Carrito</a>
+          </li>
         </ul>
       </div>
     </nav>
+    <div>
+      <p>Temperatura: {{ temperatura }}°C</p>
+      <p>Hora local: {{ hora_local }}</p>
+    </div>
+    <div class="container">
+      <p>Valor del dólar frente al peso chileno: {{ tipo_cambio }}</p>
+    </div>
     <main class="container mt-5">
       <header>
         <div class="row">
@@ -79,7 +90,7 @@ PRECOMPRA LA ULTIMATE EDITION Y CONSIGUE ACCESO ANTICIPADO AL LANZAMIENTO DE DIA
                   data-placement="right"
                   title="Realiza la precompra"
                 >
-                  Reservar
+                  <a href="register-app">Reservar</a>
                 </button>
               </div>
             </div>
@@ -116,7 +127,7 @@ PRECOMPRA LA ULTIMATE EDITION Y CONSIGUE ACCESO ANTICIPADO AL LANZAMIENTO DE DIA
                     src="static/core/img/sub1.jpg"
                     class="d-block w-100"
                     alt="..."
-                  />
+                  /><a href="https://www.epicgames.com/site/es-ES/home"></a>
                 </div>
                 <div class="col-md-3 col-lg-3 col-xl-3">
                   <img
@@ -182,19 +193,19 @@ PRECOMPRA LA ULTIMATE EDITION Y CONSIGUE ACCESO ANTICIPADO AL LANZAMIENTO DE DIA
             <h4>TOP ULTIMOS LANZAMIENTOS</h4>
             <p>Año 2022</p>
             <ul>
-              <li>Diablo Mortal</li>
-              <li>Call of Duty Modern Warfare II</li>
-              <li>Dragon Ball: The Breakers</li>
-              <li>Dying Light 2 Stay Human</li>
-              <li>Elden Ring</li>
-              <li>Final Fantasy VII: Ever Crisis</li>
+              <li><a href="carrito-app">Mortal</a></li>
+              <li><a href="carrito-app">Call of Duty Modern Warfare II</a></li>
+              <li><a href="carrito-app">Dragon Ball: The Breakers</a></li>
+              <li><a href="carrito-app">Dying Light 2 Stay Human</a></li>
+              <li><a href="carrito-app">Elden Ring</a></li>
+              <li><a href="carrito-app">Final Fantasy VII: Ever Crisis</a></li>
              
             </ul>
           </div>
           <div class="col-xs-12-col-md-12 col-lg-6 col-xl-6">
             <h4>VISITANOS EN NUESTRAS TIENDAS</h4>
             <p>
-              SANTIAGO. CALLE LARGA  8125, LO BARNECHEA .
+              <a href="https://www.google.cl/maps/search/SANTIAGO.+CALLE+LARGA+8125,+LO+BARNECHEA+./@-33.4723925,-70.7946375,11z/data=!3m1!4b1">SANTIAGO. CALLE LARGA  8125, LO BARNECHEA.</a>
             </p>
             <div class="col-md-12 col-lg-12 col-xl-12">
               <img
@@ -204,7 +215,7 @@ PRECOMPRA LA ULTIMATE EDITION Y CONSIGUE ACCESO ANTICIPADO AL LANZAMIENTO DE DIA
               />
             </div>
             <p>
-              LOS ANGELES. CALLE ANGOSTA 9972.
+              <a href="https://www.google.cl/maps/search/LOS+ANGELES.+CALLE+ANGOSTA+9972./@34.020893,-118.3606268,12z">LOS ANGELES. CALLE ANGOSTA 9972.</a>
             </p>
             <div class="col-md-12 col-lg-12 col-xl-12 m-2">
               <img
@@ -293,7 +304,7 @@ PRECOMPRA LA ULTIMATE EDITION Y CONSIGUE ACCESO ANTICIPADO AL LANZAMIENTO DE DIA
       <div class="container-fluid footer-end p-5 text-white">
         <p class="font-weight-bold text-resp">SUSCRÍBETE EN NUESTRO NEWSLETTER</p>
         <p>y obtén todas las novedades que tenemos en <a class="navbar-brand text-white" href="#">Meta Juegos</a></p>
-        <button type="button" class="btn btn-outline-light px-5">Empezar</button>
+        <button type="button"  class="btn btn-outline-light px-5"><a href="register-app">Empezar</a></button>
       </div>
       <div class="container-fluid footer-last">
         <a class="navbar-brand text-white " href="#">Meta Juegos</a>

@@ -36,6 +36,9 @@
           <li class="nav-item">
             <a class="nav-link text-white">Contacto</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="carrito-app">Carrito</a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -53,12 +56,12 @@
                     <h2 class="fw-bold mb-2 text-uppercase">Registrate</h2>
                     <p class="text-white-50 mb-5">Ingresa tu usuario y password!</p>
                     <div class="form-outline form-white mb-4">
-                      <input type="username" id="username" class="form-control form-control-lg" {{login.username}}>
+                      <input type="username" id="username" class="form-control form-control-lg" {{.username}}>
                       <label class="form-label" for="typeEmailX">Email</label>
                     </div>
       
                     <div class="form-outline form-white mb-4">
-                      <input type="password" id="username" class="form-control form-control-lg" {{login.password}}>
+                      <input type="password" id="username" class="form-control form-control-lg" {{.password}}>
                       <label class="form-label" for="typePasswordX">Password</label>
                     </div>
       
